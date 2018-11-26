@@ -30,5 +30,7 @@
 </script>
 
 <style>
-
+  nav.v-toolbar {
+    box-shadow: none;
+  }
 </style>
