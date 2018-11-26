@@ -14,10 +14,16 @@
     </v-toolbar-items>
     <v-spacer></v-spacer>
     <v-btn icon>
-      <v-icon class="pink--text">account_circle</v-icon>
+      <v-badge color="pink" right>
+        <span slot="badge">!</span>
+        <v-icon class="pink--text">account_circle</v-icon>
+      </v-badge>
     </v-btn>
     <v-btn icon>
-      <v-icon class="pink--text">shopping_cart</v-icon>
+      <v-badge color="pink" right>
+        <span slot="badge">6</span>
+        <v-icon class="pink--text">shopping_cart</v-icon>
+      </v-badge>
     </v-btn>
   </v-toolbar>
 </template>
