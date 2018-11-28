@@ -11,7 +11,7 @@
             :key="i"
             :src="item.src"
           >
-            <v-jumbotron dark>
+            <v-responsive dark>
               <v-container fill-height>
                 <v-layout align-center>
                   <v-flex>
@@ -20,7 +20,7 @@
                   </v-flex>
                 </v-layout>
               </v-container>
-            </v-jumbotron>
+            </v-responsive>
           </v-carousel-item>
         </v-carousel>
       </section>

@@ -4,6 +4,7 @@
       <AppHeader/>
       <AppHome/>
       <AppFooter/>
+      <AppFab/>
     </v-app>
   </div>
 </template>
@@ -12,13 +13,15 @@
 import AppHeader from './components/AppHeader.vue'
 import AppHome from './components/AppHome.vue'
 import AppFooter from './components/AppFooter.vue'
+import AppFab from "./components/AppFab";
 
 export default {
   name: 'app',
   components: {
     AppHeader,
     AppHome,
-    AppFooter
+    AppFooter,
+    AppFab
   }
 }
 </script>

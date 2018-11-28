@@ -13,12 +13,9 @@
       <v-btn class="pink--text font-weight-black" flat>Accesories</v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>
-    <v-dialog v-model="dialog" max-width="300px">
+    <v-dialog max-width="300px">
       <v-btn slot="activator" icon>
-        <v-badge color="pink" right>
-          <span slot="badge">!</span>
           <v-icon class="pink--text">account_circle</v-icon>
-        </v-badge>
       </v-btn>
       <v-card>
         <v-card-title
