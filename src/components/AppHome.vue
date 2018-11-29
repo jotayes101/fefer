@@ -1,34 +1,32 @@
 <template>
-  <div>
-    <v-content>
-      <section>
-        <v-carousel
-          hide-delimiters
-          height="657"
+  <v-content>
+    <section>
+      <v-carousel
+        hide-delimiters
+        height="657"
+      >
+        <v-carousel-item
+          v-for="(item,i) in items"
+          :key="i"
+          :src="item.src"
         >
-          <v-carousel-item
-            v-for="(item,i) in items"
-            :key="i"
-            :src="item.src"
-          >
-            <v-responsive dark>
-              <v-container fill-height>
-                <v-layout align-center>
-                  <v-flex>
-                    <h3 class="display-3">{{ item.title }}</h3>
-                    <span class="subheading">{{ item.text }}</span>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-responsive>
-          </v-carousel-item>
-        </v-carousel>
-      </section>
-      <section>
-        <CardCarousel/>
-      </section>
-    </v-content>
-  </div>
+          <v-responsive class="textCarousel" dark>
+            <v-container fill-height>
+              <v-layout align-center>
+                <v-flex>
+                  <h3 class="white--text display-3 text-lg-right">{{ item.title }}</h3>
+                  <!-- <span class="white--text subheading">{{ item.text }}</span> -->
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </v-responsive>
+        </v-carousel-item>
+      </v-carousel>
+    </section>
+    <section>
+      <CardCarousel/>
+    </section>
+  </v-content>
 </template>
 
 <script>
@@ -63,5 +61,9 @@
 </script>
 
 <style>
-
+  .textCarousel {
+    position: absolute !important;
+    bottom: 100px;
+    width: 100%;
+  }
 </style>

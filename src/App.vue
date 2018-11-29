@@ -1,12 +1,10 @@
 <template>
-  <div id="app">
-    <v-app>
-      <AppHeader/>
-      <AppHome/>
-      <AppFooter/>
-      <AppFab/>
-    </v-app>
-  </div>
+  <v-app>
+    <AppHeader/>
+    <AppHome/>
+    <AppFooter/>
+    <AppFab/>
+  </v-app>
 </template>
 
 <script>
