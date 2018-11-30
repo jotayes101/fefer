@@ -1,8 +1,8 @@
 <template>
   <v-toolbar
     fixed
-    color="transparent"
-    scroll-off-screen
+    :color="colorToolbar"
+    v-scroll="onScroll"
   >
     <v-toolbar-title class="pink--text font-weight-black">Fefer</v-toolbar-title>
     <!-- <v-img src="../assets/logo1fefer2.png" aspect-ratio="1.7"></v-img> -->
@@ -48,6 +48,18 @@
 <script>
   export default {
     name: 'AppHeader',
+    data: () => ({
+      colorToolbar: "transparent"
+    }),
+    methods: {
+      onScroll () {
+        if (typeof window === 'undefined') return
+        const top = window.pageYOffset ||
+          document.documentElement.offsetTop ||
+          0
+        this.colorToolbar = (top > 100) ? "grey darken-4" : "transparent";
+      }
+    }
   }
 </script>
 
