@@ -8,7 +8,7 @@
       fixed
       bottom
       right
-      color="pink darken-2"
+      color="pink darken-1"
       @click="toTop"
     >
       <v-icon>keyboard_arrow_up</v-icon>

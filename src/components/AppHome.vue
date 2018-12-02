@@ -10,11 +10,11 @@
           :key="i"
           :src="item.src"
         >
-          <v-responsive class="textCarousel" dark>
+          <v-responsive class="carousel-position" dark>
             <v-container fill-height>
               <v-layout align-center>
                 <v-flex>
-                  <h3 class="white--text display-3 text-lg-right">{{ item.title }}</h3>
+                  <h3 class="pink-shadow white--text display-1 text-lg-center font-weight-light font-italic">{{ item.title }}</h3>
                   <!-- <span class="white--text subheading">{{ item.text }}</span> -->
                 </v-flex>
               </v-layout>
@@ -31,9 +31,10 @@
 
 <script>
   import CardCarousel from './CardCarousel.vue'
-  import img1 from '../assets/banner1.jpg'
+  import img1 from '../assets/banner4.jpg'
+  import img5 from '../assets/banner5.jpeg'
   import img2 from '../assets/banner2.jpg'
-  import img3 from '../assets/3_ICELAND_FLYN_FINAL-1377318_1920x.jpg'
+  import img3 from '../assets/banner3.jpg'
   export default {
     components: {
       CardCarousel
@@ -42,17 +43,22 @@
       items: [
         {
           src: img1,
-          title: "Texto",
+          title: "Las mejores marcas y accesorios para verdaderos fanaticos de la ruta.",
+          text: "Contenido de la imagen"
+        },
+        {
+          src: img5,
+          title: "Enterate de la programación de eventos y acompañame en rutas y salidas.",
           text: "Contenido de la imagen"
         },
         {
           src: img2,
-          title: "Texto",
+          title: "Luce comoda y bella con la mejor ropa deportiva.",
           text: "Contenido de la imagen"
         },
         {
           src: img3,
-          title: "Texto",
+          title: "Las mejores marcas y accesorios para verdaderos fanaticos de la montaña.",
           text: "Contenido de la imagen"
         }
       ]
@@ -61,7 +67,7 @@
 </script>
 
 <style>
-  .textCarousel {
+  .carousel-position {
     position: absolute !important;
     bottom: 100px;
     width: 100%;
