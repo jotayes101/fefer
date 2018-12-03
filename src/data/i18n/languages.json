@@ -10,11 +10,5 @@
     "locale": "es-ES",
     "country": "es",
     "flag": "spain"
-  },
-  {
-    "name": "Português",
-    "locale": "pt-BR",
-    "country": "br",
-    "flag": "brazil"
   }
 ]

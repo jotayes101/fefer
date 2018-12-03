@@ -8,7 +8,7 @@
         <v-carousel-item
           v-for="(item,i) in items"
           :key="i"
-          :src="item.src"
+          :src="require(`@/assets/${item.src}`)"
         >
           <v-responsive class="carousel-position" dark>
             <v-container fill-height>
@@ -31,10 +31,7 @@
 
 <script>
   import CardCarousel from './CardCarousel.vue'
-  import img1 from '@/assets/banner4.jpg'
-  import img5 from '@/assets/banner5.jpeg'
-  import img2 from '@/assets/banner2.jpg'
-  import img3 from '@/assets/banner3.jpg'
+
   export default {
     components: {
       CardCarousel
@@ -42,22 +39,22 @@
     data: () => ({
       items: [
         {
-          src: img1,
+          src: "banner4.jpg",
           title: "Las mejores marcas y accesorios para verdaderos fanaticos de la ruta.",
           text: "Contenido de la imagen"
         },
         {
-          src: img5,
+          src: "banner5.jpeg",
           title: "Enterate de la programación de eventos y acompañame en rutas y salidas.",
           text: "Contenido de la imagen"
         },
         {
-          src: img2,
+          src: "banner2.jpg",
           title: "Luce comoda y bella con la mejor ropa deportiva.",
           text: "Contenido de la imagen"
         },
         {
-          src: img3,
+          src: "banner3.jpg",
           title: "Las mejores marcas y accesorios para verdaderos fanaticos de la montaña.",
           text: "Contenido de la imagen"
         }

@@ -10,7 +10,7 @@
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn class="white--text pink-shadow font-weight-black" flat>Woman</v-btn>
-      <v-btn class="white--text pink-shadow font-weight-black" flat>Men</v-btn>
+      <v-btn to="/about" class="white--text pink-shadow font-weight-black" flat>Men</v-btn>
       <v-btn class="white--text pink-shadow font-weight-black" flat>Accesories</v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>

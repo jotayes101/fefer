@@ -3,10 +3,10 @@ import App from './App.vue'
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css'
 import '@fortawesome/fontawesome-free/css/all.css'
+
 // import 'font-awesome/css/font-awesome.css';
 
-// Helpers
-import colors from 'vuetify/es5/util/colors'
+import router from './router'
 
 Vue.config.productionTip = false
 Vue.use(Vuetify, {
@@ -18,7 +18,8 @@ Vue.use(Vuetify, {
   // }
 })
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app')
 // new Vue({
 //   el: '#app',
