@@ -95,13 +95,24 @@
         <v-icon class="white--text pink-shadow">shopping_cart</v-icon>
       </v-badge>
     </v-btn>
+    <v-btn
+      flat
+      style="min-width: 48px"
+    >
+      <img
+        class="language-selected"
+        src="../assets/img/flags/es-ES.svg"
+      >
+    </v-btn>
   </v-toolbar>
 </template>
 
 <script>
+  import languages from '@/data/i18n/languages.json'
   export default {
     name: 'AppHeader',
     data: () => ({
+      languages,
       colorToolbar: "transparent",
       dialogLogin: false,
       dialogRegister: false
@@ -139,5 +150,9 @@
     cursor: pointer;
     color: #D81B60;
     font-size: 13px;
+  }
+  img.language-selected {
+    border-radius: 50%!important;
+    width: 26px;
   }
 </style>
