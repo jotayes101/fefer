@@ -75,7 +75,7 @@
     background-color: #55a8ea;
   }
   .back-instagram:hover {
-    background-image: url(../assets/img/buttons/instagram-bg.svg);
+    background-image: url(../../assets/img/buttons/instagram-bg.svg);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;

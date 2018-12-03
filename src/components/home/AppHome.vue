@@ -31,10 +31,10 @@
 
 <script>
   import CardCarousel from './CardCarousel.vue'
-  import img1 from '../assets/banner4.jpg'
-  import img5 from '../assets/banner5.jpeg'
-  import img2 from '../assets/banner2.jpg'
-  import img3 from '../assets/banner3.jpg'
+  import img1 from '@/assets/banner4.jpg'
+  import img5 from '@/assets/banner5.jpeg'
+  import img2 from '@/assets/banner2.jpg'
+  import img3 from '@/assets/banner3.jpg'
   export default {
     components: {
       CardCarousel

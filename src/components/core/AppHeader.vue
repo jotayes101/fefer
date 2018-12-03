@@ -95,19 +95,42 @@
         <v-icon class="white--text pink-shadow">shopping_cart</v-icon>
       </v-badge>
     </v-btn>
-    <v-btn
-      flat
-      style="min-width: 48px"
-    >
-      <img
-        class="language-selected"
-        src="../assets/img/flags/es-ES.svg"
+
+    <v-menu offset-y>
+      <v-btn
+        slot="activator"
+        flat
+        style="min-width: 48px"
       >
-    </v-btn>
+        <img
+          class="language-selected"
+          src="@/assets/img/flags/spain.svg"
+        >
+      </v-btn>
+      <v-list subheader>
+        <v-subheader>Seleccione idioma</v-subheader>
+        <v-list-tile
+          v-for="language in languages"
+          :key="language.locale"
+          avatar
+        >
+          <v-list-tile-avatar>
+            <img
+              class="language-selected"
+              :src="language.flag"
+            >
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title v-html="language.name"></v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
   </v-toolbar>
 </template>
 
 <script>
+
   import languages from '@/data/i18n/languages.json'
   export default {
     name: 'AppHeader',

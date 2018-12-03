@@ -2,16 +2,19 @@
   {
     "name": "English",
     "locale": "en",
-    "country": "us"
+    "country": "us",
+    "flag": "../../assets/img/flags/usa.svg"
   },
   {
     "name": "Español",
     "locale": "es-ES",
-    "country": "mx"
+    "country": "es",
+    "flag": "../../assets/img/flags/spain.svg"
   },
   {
     "name": "Português",
     "locale": "pt-BR",
-    "country": "br"
+    "country": "br",
+    "flag": "../../assets/img/flags/china.svg"
   }
 ]
