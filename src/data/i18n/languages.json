@@ -3,18 +3,18 @@
     "name": "English",
     "locale": "en",
     "country": "us",
-    "flag": "../../assets/img/flags/usa.svg"
+    "flag": "usa"
   },
   {
     "name": "Español",
     "locale": "es-ES",
     "country": "es",
-    "flag": "../../assets/img/flags/spain.svg"
+    "flag": "spain"
   },
   {
     "name": "Português",
     "locale": "pt-BR",
     "country": "br",
-    "flag": "../../assets/img/flags/china.svg"
+    "flag": "brazil"
   }
 ]

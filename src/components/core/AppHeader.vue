@@ -96,7 +96,7 @@
       </v-badge>
     </v-btn>
 
-    <v-menu offset-y>
+    <v-menu  offset-y>
       <v-btn
         slot="activator"
         flat
@@ -107,22 +107,29 @@
           src="@/assets/img/flags/spain.svg"
         >
       </v-btn>
-      <v-list subheader>
-        <v-subheader>Seleccione idioma</v-subheader>
+      <v-list style="padding: 0px;">
+        <div class="subheader-custom">
+          <!-- <span style="left: auto; right: 5px; color: #6f47d0 line-height: 0;
+          display: inline-block;
+          overflow: hidden;
+          height: 11px;
+          width: 40px;
+          top: 0;
+          position: absolute;"></span> -->
+          <span class="white--text text-md-center font-weight-light">Elige tu idioma</span>
+        </div>
         <v-list-tile
           v-for="language in languages"
           :key="language.locale"
-          avatar
+          @click=""
         >
           <v-list-tile-avatar>
             <img
-              class="language-selected"
-              :src="language.flag"
+              class="language-list"
+              :src="require(`@/assets/img/flags/${language.flag}.svg`)"
             >
           </v-list-tile-avatar>
-          <v-list-tile-content>
-            <v-list-tile-title v-html="language.name"></v-list-tile-title>
-          </v-list-tile-content>
+          <v-list-tile-title v-html="language.name"></v-list-tile-title>
         </v-list-tile>
       </v-list>
     </v-menu>
@@ -177,5 +184,17 @@
   img.language-selected {
     border-radius: 50%!important;
     width: 26px;
+  }
+  img.language-list {
+    border-radius: 50%!important;
+    width: 22px !important;
+    height: 22px !important;
+  }
+  .subheader-custom {
+    padding-top: 13px;
+    height: 48px;
+    text-align: center !important;
+    background-image: url('../../assets/img/quick_actions_bg.jpg');
+    background-size: cover;
   }
 </style>
