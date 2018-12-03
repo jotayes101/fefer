@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import AppHeader from './components/AppHeader.vue'
-import AppHome from './components/AppHome.vue'
-import AppFooter from './components/AppFooter.vue'
-import AppFab from "./components/AppFab";
+import AppHeader from './components/core/AppHeader.vue'
+import AppHome from './components/home/AppHome.vue'
+import AppFooter from './components/core/AppFooter.vue'
+import AppFab from "./components/core/AppFab";
 
 export default {
   name: 'app',
