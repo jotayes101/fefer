@@ -10,9 +10,9 @@
     <!-- <v-img src="../assets/logo1fefer2.png" aspect-ratio="1.7"></v-img> -->
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn to="/" class="white--text pink-shadow font-weight-black" flat>Woman</v-btn>
-      <v-btn to="/about" class="white--text pink-shadow font-weight-black" flat>Men</v-btn>
-      <v-btn class="white--text pink-shadow font-weight-black" flat>Accesories</v-btn>
+      <v-btn to="/" class="white--text pink-shadow font-weight-black" flat>{{ $t('woman') }}</v-btn>
+      <v-btn to="/about" class="white--text pink-shadow font-weight-black" flat>{{ $t('men') }}</v-btn>
+      <v-btn class="white--text pink-shadow font-weight-black" flat>{{ $t('accesories') }}</v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>
     <v-btn
@@ -105,7 +105,7 @@
       >
         <img
           class="language-selected"
-          src="@/assets/img/flags/spain.svg"
+          :src="require(`@/assets/img/flags/${currentLanguage.flag}.svg`)"
         >
       </v-btn>
       <v-list style="padding: 0px;">
@@ -122,7 +122,7 @@
         <v-list-tile
           v-for="language in languages"
           :key="language.locale"
-          @click=""
+          @click="translateI18n(language.locale)"
         >
           <v-list-tile-avatar>
             <img
@@ -155,6 +155,11 @@
         this.propApp = pInfo.app;
       })
     },
+    computed: {
+      currentLanguage () {
+        return this.languages.find(l => l.locale === this.$i18n.locale);
+      }
+    },
     methods: {
       onScroll () {
         if (typeof window === 'undefined') return
@@ -174,6 +179,12 @@
       anyAccount () {
         this.dialogLogin = false;
         this.dialogRegister = true;
+      },
+      translateI18n (lang) {
+        console.log('lang: ', lang);
+        this.$i18n.locale = lang;
+        // this.$router.replace({ params: { lang } })
+        // document.cookie = `currentLanguage=${lang};path=/;max-age=${60 * 60 * 24 * 7}` // expires in 7 days
       }
     }
   }
