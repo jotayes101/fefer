@@ -59,7 +59,13 @@
           text: "Contenido de la imagen"
         }
       ]
-    })
+    }),
+    mounted: function () { 
+      this.$root.$emit('changeToolbar', {
+        color: "transparent",
+        app: false
+      });
+    }
   }
 </script>
 

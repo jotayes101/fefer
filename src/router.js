@@ -5,7 +5,7 @@ import About from './views/About.vue'
 
 Vue.use(Router)
 
-export default new Router({
+export const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -14,16 +14,18 @@ export default new Router({
   ]
 })
 
-// router.beforeEach((to, from, next) => {
-//   console.log('to: ', to);
-//   // redirect to login page if not logged in and trying to access a restricted page
-//   // const publicPages = ['/', '/login', '/register'];
-//   // const authRequired = !publicPages.includes(to.path);
-//   // const loggedIn = localStorage.getItem('user');
+router.beforeEach((to, from, next) => {
 
-//   // if (authRequired && !loggedIn) {
-//   //   return next('/');
-//   // }
+  // redirect to login page if not logged in and trying to access a restricted page
+  // const publicPages = ['/', '/login', '/register'];
+  // const authRequired = !publicPages.includes(to.path);
+  // const loggedIn = localStorage.getItem('user');
 
-//   next(to);
-// })
+  // if (authRequired && !loggedIn) {
+  //   return next('/');
+  // }
+
+  next();
+})
+
+export default router;

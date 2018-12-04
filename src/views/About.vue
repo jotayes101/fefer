@@ -1,5 +1,5 @@
 <template>
-  <v-content style="padding: 64px 0px 0px;";>
+  <v-content>
     <v-container>
       <v-layout row wrap>
       <v-flex xs12>
@@ -11,3 +11,15 @@
     </v-container>
   </v-content>
 </template>
+
+<script>
+  export default {
+    name: 'About',
+    mounted: function () { 
+      this.$root.$emit('changeToolbar', {
+        color: "grey darken-4",
+        app: true
+      });
+    }
+  }
+</script>

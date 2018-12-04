@@ -1,5 +1,6 @@
 <template>
   <v-toolbar
+    :app="propApp"
     fixed
     dark
     :color="colorToolbar"
@@ -9,7 +10,7 @@
     <!-- <v-img src="../assets/logo1fefer2.png" aspect-ratio="1.7"></v-img> -->
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn class="white--text pink-shadow font-weight-black" flat>Woman</v-btn>
+      <v-btn to="/" class="white--text pink-shadow font-weight-black" flat>Woman</v-btn>
       <v-btn to="/about" class="white--text pink-shadow font-weight-black" flat>Men</v-btn>
       <v-btn class="white--text pink-shadow font-weight-black" flat>Accesories</v-btn>
     </v-toolbar-items>
@@ -143,17 +144,24 @@
     name: 'AppHeader',
     data: () => ({
       languages,
+      propApp: false,
       colorToolbar: "transparent",
       dialogLogin: false,
       dialogRegister: false
     }),
+    mounted: function () {
+      this.$root.$on('changeToolbar', (pInfo) => {
+        this.colorToolbar = pInfo.color;
+        this.propApp = pInfo.app;
+      })
+    },
     methods: {
       onScroll () {
         if (typeof window === 'undefined') return
         const top = window.pageYOffset ||
           document.documentElement.offsetTop ||
           0
-        this.colorToolbar = (top > 100) ? "grey darken-4" : "transparent";
+        this.colorToolbar = (top > 100 && this.$router.history.current.path === "/") ? "grey darken-4" : "transparent";
       },
       accountFunc () {
         //TODO: CHANGE FOR LOGIN VALIDATION
